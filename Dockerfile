@@ -16,9 +16,8 @@ COPY ./app /code/app
 # Set the environment variables for wandb
 ENV WANDB_API_KEY=""
 ENV MODEL_PATH=""
-ENV PORT=8080
 
-EXPOSE $PORT
+EXPOSE 8080
 
 # Start the application using uvicorn
-CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port $PORT"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080"]
