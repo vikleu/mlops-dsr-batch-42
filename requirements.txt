@@ -1,2 +1,5 @@
 fastapi[standard]==0.115.13
 torch==2.7.1
+torchvision==0.22.1
+wandb==0.20.1
+loadotenv==1.0.1
